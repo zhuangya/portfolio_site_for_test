@@ -9,6 +9,9 @@ angular.module('hsApp', [
   }).when('/img/:imgId', {
     templateUrl: 'views/img.html',
     controller: 'ImgCtrl'
+  }).when('/about', {
+    templateUrl: 'views/about.html',
+    controller: 'AboutCtrl'
   });
 
 }).value('IMAGES', [{ //TODO: change these images.
@@ -157,4 +160,7 @@ angular.module('hsApp').controller('HomepageCtrl', function($scope, IMAGES) {
 });
 
 angular.module('hsApp').controller('ImgCtrl', function($scope, $routeParams, IMAGES) {
+});
+
+angular.module('hsApp').controller('AboutCtrl', function() {
 });
