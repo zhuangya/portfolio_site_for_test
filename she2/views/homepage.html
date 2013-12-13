@@ -1,0 +1,14 @@
+<ul ng-init="select('all')" ng-mouseout="select('all')" id="sub_menu">
+  <li 
+  ng-mouseover="select(property.name)"
+  ng-repeat="property in properties">
+  {{property.text}}
+  </li>
+</ul>
+
+<a ng-repeat="image in images" ng-href="/#/img/{{image.id}}">
+  <img class="thumbnail" ng-mouseover="updateImgName(image)" ng-class="spark(image.properties)" ng-src="{{image.src}}">
+</a>
+
+<p id="nameofcurrentImage">{{currentImage}}</p>
+
